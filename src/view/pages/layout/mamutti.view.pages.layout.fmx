@@ -1,0 +1,69 @@
+object PageLayout: TPageLayout
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 681
+  ClientWidth = 986
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lytContainer: TLayout
+    Align = Client
+    Size.Width = 986.000000000000000000
+    Size.Height = 681.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object recBackground: TRectangle
+      Align = Contents
+      Fill.Color = xFFF4F3EF
+      Size.Width = 986.000000000000000000
+      Size.Height = 681.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object lytMain: TLayout
+      Align = Client
+      Margins.Left = 80.000000000000000000
+      Size.Width = 906.000000000000000000
+      Size.Height = 681.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object lytHeader: TLayout
+        Align = Top
+        Size.Width = 906.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Button1: TButton
+          Position.X = 360.000000000000000000
+          Position.Y = 8.000000000000000000
+          TabOrder = 0
+          Text = 'Button1'
+        end
+      end
+      object lytBody: TLayout
+        Align = Client
+        Size.Width = 906.000000000000000000
+        Size.Height = 621.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object MultiView1: TMultiView
+      MasterButton = Button1
+      NavigationPaneOptions.CollapsedWidth = 80.000000000000000000
+      Size.Width = 250.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object lytSideBar: TLayout
+        Align = Client
+        Size.Width = 80.000000000000000000
+        Size.Height = 681.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+    end
+  end
+end
