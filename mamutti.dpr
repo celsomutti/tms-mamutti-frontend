@@ -1,5 +1,7 @@
 program mamutti;
 
+{$R *.dres}
+
 uses
   System.StartUpCopy,
   FMX.Forms,
@@ -17,13 +19,13 @@ uses
   mamutti.view.components.edits in 'src\view\components\edit\mamutti.view.components.edits.pas' {ComponentEdit: TFrame},
   mamutti.view.components.editImage in 'src\view\components\editImagem\mamutti.view.components.editImage.pas' {ComponentEditImage: TFrame},
   mamutti.view.pages.home in 'src\view\pages\home\mamutti.view.pages.home.pas' {PageHome},
-  mamutti.view.router in 'src\view\router\mamutti.view.router.pas';
+  mamutti.view.router in 'src\view\router\mamutti.view.router.pas',
+  mamutti.view.components.buttonmenu in 'src\view\components\buttonmenu\mamutti.view.components.buttonmenu.pas' {ComponentButtonMenu: TFrame};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.CreateForm(TPageIndex, PageIndex);
-  Application.CreateForm(TPageHome, PageHome);
   Application.Run;
 end.

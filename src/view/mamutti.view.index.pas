@@ -24,11 +24,11 @@ implementation
 {$R *.fmx}
 
 uses
-  Router4D, mamutti.view.pages.home;
+  Router4D, mamutti.view.pages.layout;
 
 procedure TPageIndex.FormCreate(Sender: TObject);
 begin
-  TRouter4D.Render<TPageHome>.SetELement(lytContainer,lytContainer);
+  TRouter4D.Render<TPageLayout>.SetELement(lytContainer,lytContainer);
 end;
 
 end.

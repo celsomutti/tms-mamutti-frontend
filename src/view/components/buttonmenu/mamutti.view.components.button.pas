@@ -171,7 +171,7 @@ begin
   Result := Self;
   TUtils.ResourceImage(Value, FotoPerfil);
   FotoPerfil.Visible := True;
-  Layout1.Padding.Left := 10;
+  Layout1.Padding.Left := 0;
 end;
 
 function TComponentButton.SingleButton: TComponentButton;

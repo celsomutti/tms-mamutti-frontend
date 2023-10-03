@@ -1,37 +1,31 @@
 object ComponentButton: TComponentButton
   Size.Width = 324.000000000000000000
-  Size.Height = 59.000000000000000000
+  Size.Height = 26.000000000000000000
   Size.PlatformDefault = False
   object lytContainer: TLayout
     Align = Top
     Size.Width = 324.000000000000000000
-    Size.Height = 60.000000000000000000
+    Size.Height = 26.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     object Layout1: TLayout
       Align = Top
-      Padding.Left = 20.000000000000000000
-      Padding.Top = 10.000000000000000000
-      Padding.Right = 20.000000000000000000
-      Padding.Bottom = 10.000000000000000000
+      Padding.Left = 10.000000000000000000
+      Padding.Right = 10.000000000000000000
       Size.Width = 324.000000000000000000
-      Size.Height = 60.000000000000000000
+      Size.Height = 25.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       object Layout2: TLayout
         Align = Client
-        Size.Width = 284.000000000000000000
-        Size.Height = 40.000000000000000000
+        Size.Width = 304.000000000000000000
+        Size.Height = 25.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object lytImageInfo: TLayout
           Align = Left
-          Padding.Left = 5.000000000000000000
-          Padding.Top = 5.000000000000000000
-          Padding.Right = 5.000000000000000000
-          Padding.Bottom = 5.000000000000000000
           Size.Width = 40.000000000000000000
-          Size.Height = 40.000000000000000000
+          Size.Height = 25.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
           object ImageInfo: TImage
@@ -39,8 +33,8 @@ object ComponentButton: TComponentButton
               item
               end>
             Align = Client
-            Size.Width = 30.000000000000000000
-            Size.Height = 30.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 25.000000000000000000
             Size.PlatformDefault = False
           end
           object FotoPerfil: TCircle
@@ -56,13 +50,13 @@ object ComponentButton: TComponentButton
         end
         object lytImageMenu: TLayout
           Align = Right
-          Padding.Left = 15.000000000000000000
-          Padding.Top = 15.000000000000000000
-          Padding.Right = 15.000000000000000000
-          Padding.Bottom = 15.000000000000000000
-          Position.X = 244.000000000000000000
+          Padding.Left = 8.000000000000000000
+          Padding.Top = 8.000000000000000000
+          Padding.Right = 8.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Position.X = 264.000000000000000000
           Size.Width = 40.000000000000000000
-          Size.Height = 40.000000000000000000
+          Size.Height = 25.000000000000000000
           Size.PlatformDefault = False
           Visible = False
           TabOrder = 1
@@ -71,26 +65,26 @@ object ComponentButton: TComponentButton
               item
               end>
             Align = Client
-            Size.Width = 10.000000000000000000
-            Size.Height = 10.000000000000000000
+            Size.Width = 24.000000000000000000
+            Size.Height = 9.000000000000000000
             Size.PlatformDefault = False
           end
         end
         object lytDescricao: TLayout
           Align = Client
-          Padding.Left = 10.000000000000000000
-          Padding.Top = 10.000000000000000000
-          Padding.Right = 10.000000000000000000
-          Padding.Bottom = 10.000000000000000000
-          Size.Width = 244.000000000000000000
-          Size.Height = 40.000000000000000000
+          Padding.Left = 5.000000000000000000
+          Padding.Top = 5.000000000000000000
+          Padding.Right = 5.000000000000000000
+          Padding.Bottom = 5.000000000000000000
+          Size.Width = 264.000000000000000000
+          Size.Height = 25.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
           object lblDescricao: TLabel
             Align = Client
             StyledSettings = [Family, Style]
-            Size.Width = 224.000000000000000000
-            Size.Height = 20.000000000000000000
+            Size.Width = 254.000000000000000000
+            Size.Height = 15.000000000000000000
             Size.PlatformDefault = False
             TextSettings.Font.Size = 13.000000000000000000
             Text = 'TEste de descricao'
@@ -102,7 +96,7 @@ object ComponentButton: TComponentButton
         Align = Contents
         HitTest = True
         Size.Width = 324.000000000000000000
-        Size.Height = 60.000000000000000000
+        Size.Height = 25.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
         OnResized = lytButtonResized

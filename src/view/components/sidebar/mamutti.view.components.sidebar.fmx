@@ -1,11 +1,11 @@
 object ComponentSidebar: TComponentSidebar
-  Size.Width = 250.000000000000000000
+  Size.Width = 221.000000000000000000
   Size.Height = 747.000000000000000000
   Size.PlatformDefault = False
   object lytContainer: TLayout
     Align = Client
     Padding.Top = 10.000000000000000000
-    Size.Width = 250.000000000000000000
+    Size.Width = 221.000000000000000000
     Size.Height = 747.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
@@ -25,7 +25,7 @@ object ComponentSidebar: TComponentSidebar
       Fill.Gradient.StartPosition.Y = 1.000000000000000000
       Fill.Gradient.StopPosition.X = 0.499999970197677600
       Fill.Gradient.StopPosition.Y = 0.000000000000000000
-      Size.Width = 250.000000000000000000
+      Size.Width = 221.000000000000000000
       Size.Height = 747.000000000000000000
       Size.PlatformDefault = False
       Stroke.Kind = None
@@ -33,7 +33,7 @@ object ComponentSidebar: TComponentSidebar
     object Layout1: TLayout
       Align = Top
       Position.Y = 10.000000000000000000
-      Size.Width = 250.000000000000000000
+      Size.Width = 221.000000000000000000
       Size.Height = 137.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
@@ -43,7 +43,7 @@ object ComponentSidebar: TComponentSidebar
         Padding.Top = 10.000000000000000000
         Padding.Right = 20.000000000000000000
         Padding.Bottom = 10.000000000000000000
-        Size.Width = 250.000000000000000000
+        Size.Width = 221.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -52,8 +52,9 @@ object ComponentSidebar: TComponentSidebar
         Align = Client
         Padding.Left = 10.000000000000000000
         Padding.Top = 10.000000000000000000
+        Padding.Right = 10.000000000000000000
         Padding.Bottom = 10.000000000000000000
-        Size.Width = 250.000000000000000000
+        Size.Width = 221.000000000000000000
         Size.Height = 87.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
@@ -62,7 +63,7 @@ object ComponentSidebar: TComponentSidebar
           LineType = Top
           Position.X = 10.000000000000000000
           Position.Y = 10.000000000000000000
-          Size.Width = 240.000000000000000000
+          Size.Width = 201.000000000000000000
           Size.Height = 1.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFFF4F3EF
@@ -72,14 +73,15 @@ object ComponentSidebar: TComponentSidebar
           LineType = Bottom
           Position.X = 10.000000000000000000
           Position.Y = 76.000000000000000000
-          Size.Width = 240.000000000000000000
+          Size.Width = 201.000000000000000000
           Size.Height = 1.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFFF4F3EF
         end
         object lytProfile: TLayout
           Align = Client
-          Size.Width = 240.000000000000000000
+          Padding.Top = 20.000000000000000000
+          Size.Width = 201.000000000000000000
           Size.Height = 65.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
@@ -88,7 +90,7 @@ object ComponentSidebar: TComponentSidebar
     end
     object lytMenu: TLayout
       Align = Client
-      Size.Width = 250.000000000000000000
+      Size.Width = 221.000000000000000000
       Size.Height = 600.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1

@@ -56,46 +56,69 @@ begin
   var lListaBotoes := TObjectList<TFMXObject>.Create;
   lListaBotoes.Add(
     TComponentButton.New(Self)
-      .Nome('pessoas')
-      .SingleButton
-      .Descricao('Pessoas')
-      .ColorDefault($FFFFFFFF)
-      .Click(procedure (Sender: TObject)
-      begin
-        TRouter4D.Link.&To('Pessoas');
-      end)
-      .Component);
-
-  lListaBotoes.Add(
-    TComponentButton.New(Self)
       .Nome('empresas')
       .SingleButton
       .Descricao('Empresas')
       .ColorDefault($FFFFFFFF)
+//      .Click(procedure (Sender: TObject)
+//      begin
+//        TRouter4D.Link.&To('Empresas');
+//      end)
       .Component);
 
   lListaBotoes.Add(
     TComponentButton.New(Self)
-      .Nome('mercadorias')
+      .Nome('clientes')
       .SingleButton
-      .Descricao('Mercadorias')
+      .Descricao('Clientes')
       .ColorDefault($FFFFFFFF)
       .Component);
 
   lListaBotoes.Add(
     TComponentButton.New(Self)
-      .Nome('caixa')
+      .Nome('fornecedor')
       .SingleButton
-      .Descricao('Caixa')
+      .Descricao('Fornecedores')
       .ColorDefault($FFFFFFFF)
       .Component);
 
+  lListaBotoes.Add(
+    TComponentButton.New(Self)
+      .Nome('agente')
+      .SingleButton
+      .Descricao('Bases')
+      .ColorDefault($FFFFFFFF)
+      .Component);
 
     lListaBotoes.Add(
     TComponentButton.New(Self)
-      .Nome('turno')
+      .Nome('contratados')
       .SingleButton
-      .Descricao('Turno')
+      .Descricao('Contratados')
+      .ColorDefault($FFFFFFFF)
+      .Component);
+
+    lListaBotoes.Add(
+    TComponentButton.New(Self)
+      .Nome('funcionarios')
+      .SingleButton
+      .Descricao('Funcionários')
+      .ColorDefault($FFFFFFFF)
+      .Component);
+
+    lListaBotoes.Add(
+    TComponentButton.New(Self)
+      .Nome('motorista')
+      .SingleButton
+      .Descricao('Motoristas')
+      .ColorDefault($FFFFFFFF)
+      .Component);
+
+    lListaBotoes.Add(
+    TComponentButton.New(Self)
+      .Nome('veiculos')
+      .SingleButton
+      .Descricao('Veículoas')
       .ColorDefault($FFFFFFFF)
       .Component);
 
@@ -108,19 +131,19 @@ begin
 //      .ColorDefault($FFFFFFFF)
 //      .Component);
 
-  lytMenu.AddObject(
-    TComponentButton.New(Self)
-    .Nome('dashboard')
-    .SingleButton
-    .Descricao('Dashboard')
-    .Image('banco')
-    .ColorDefault($FFFFFFFF)
-    .Alinhamento(TAlignLayout.Top)
-    .Click(procedure (Sender: TObject)
-      begin
-        TRouter4D.Link.&To('Home');
-      end)
-    .Component);
+//  lytMenu.AddObject(
+//    TComponentButton.New(Self)
+//    .Nome('dashboard')
+//    .SingleButton
+//    .Descricao('Dashboard')
+//    .Image('banco')
+//    .ColorDefault($FFFFFFFF)
+//    .Alinhamento(TAlignLayout.Top)
+//    .Click(procedure (Sender: TObject)
+//      begin
+//        TRouter4D.Link.&To('Home');
+//      end)
+//    .Component);
 
   lytMenu.AddObject(
     TComponentButton.New(Self)
@@ -128,7 +151,7 @@ begin
     .CompositeButton
     .SubMenu(lListaBotoes)
     .Descricao('Cadastros')
-    .Image('cadastros')
+    .Image('cadastro')
     .ColorDefault($FFFFFFFF)
     .Alinhamento(TAlignLayout.Top)
     .Component);
@@ -139,8 +162,8 @@ begin
   lytProfile.AddObject(
     TComponentButton.New(Self)
       .Nome('perfil')
-      .Perfil('darth')
-      .Descricao('Darth Vader')
+      .Perfil('perfil')
+      .Descricao('Celso Mutti')
       .ColorDefault($FFFFFFFF)
       .Component);
 end;

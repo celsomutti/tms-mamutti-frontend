@@ -17,7 +17,7 @@ uses
   FMX.Objects,
   FMX.Controls.Presentation,
   FMX.MultiView,
-  Router4D.Interfaces, FMX.StdCtrls;
+  Router4D.Interfaces, FMX.StdCtrls, mamutti.view.components.sidebar;
 
 type
   TPageLayout = class(TForm, iRouter4DComponent)
@@ -29,6 +29,7 @@ type
     lytBody: TLayout;
     recBackground: TRectangle;
     Button1: TButton;
+    procedure Button1Click(Sender: TObject);
   private
     procedure RenderSidebar;
   public
@@ -41,15 +42,21 @@ implementation
 {$R *.fmx}
 
 uses
-  Router4D, mamutti.view.components.sidebar;
+  Router4D,
+  mamutti.view.pages.home;
 
 { TPageLayout }
 
-function TPageLayout.Render: TFMXObject;
+fprocedure TPageLayout.Button1Click(Sender: TObject);
 begin
-//  RenderSidebar;
-//  TRouter4D.Render<TPageHome>.SetELement(lytBody);
-//  Result := lytContainer;
+
+end;
+
+unction TPageLayout.Render: TFMXObject;
+begin
+  RenderSidebar;
+  TRouter4D.Render<TPageHome>.SetELement(lytBody);
+  Result := lytContainer;
 end;
 
 procedure TPageLayout.RenderSidebar;
