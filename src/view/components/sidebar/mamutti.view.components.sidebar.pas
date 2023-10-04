@@ -151,7 +151,7 @@ begin
     .CompositeButton
     .SubMenu(lListaBotoes)
     .Descricao('Cadastros')
-    .Image('cadastro')
+    .Image('cadastros')
     .ColorDefault($FFFFFFFF)
     .Alinhamento(TAlignLayout.Top)
     .Component);
