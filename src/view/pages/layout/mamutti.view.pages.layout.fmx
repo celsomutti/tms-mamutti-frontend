@@ -2,67 +2,84 @@ object PageLayout: TPageLayout
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 681
+  ClientHeight = 521
   ClientWidth = 986
+  Fill.Kind = Solid
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
-  object lytContainer: TLayout
+  object LayoutContainer: TLayout
     Align = Client
     Size.Width = 986.000000000000000000
-    Size.Height = 681.000000000000000000
+    Size.Height = 521.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
-    object recBackground: TRectangle
-      Align = Contents
-      Fill.Color = xFFF4F3EF
-      Size.Width = 986.000000000000000000
-      Size.Height = 681.000000000000000000
-      Size.PlatformDefault = False
-      Stroke.Kind = None
-    end
-    object lytMain: TLayout
-      Align = Client
-      Margins.Left = 80.000000000000000000
-      Size.Width = 906.000000000000000000
-      Size.Height = 681.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 1
-      object lytHeader: TLayout
-        Align = Top
-        Size.Width = 906.000000000000000000
-        Size.Height = 60.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 0
-        object Button1: TButton
-          Position.X = 360.000000000000000000
-          Position.Y = 8.000000000000000000
-          TabOrder = 0
-          Text = 'Button1'
-        end
-      end
-      object lytBody: TLayout
-        Align = Client
-        Size.Width = 906.000000000000000000
-        Size.Height = 621.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 1
-      end
-    end
-    object MultiView1: TMultiView
-      MasterButton = Button1
-      NavigationPaneOptions.CollapsedWidth = 60.000000000000000000
-      Size.Width = 250.000000000000000000
-      Size.Height = 50.000000000000000000
+    object LayoutSideBar: TLayout
+      Align = Left
+      Size.Width = 150.000000000000000000
+      Size.Height = 521.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
-      object lytSideBar: TLayout
-        Align = Client
-        Size.Width = 60.000000000000000000
-        Size.Height = 681.000000000000000000
+    end
+    object LayoutMain: TLayout
+      Align = Client
+      Size.Width = 836.000000000000000000
+      Size.Height = 521.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object LayoutHeader: TLayout
+        Align = Top
+        Size.Width = 836.000000000000000000
+        Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
+        object RectangleHeader: TRectangle
+          Align = Client
+          Fill.Color = claGhostwhite
+          Padding.Left = 10.000000000000000000
+          Padding.Right = 10.000000000000000000
+          Margins.Left = 2.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 824.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 10.000000000000000000
+          YRadius = 10.000000000000000000
+          object ShadowEffect1: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+        end
+      end
+      object VertScrollBox: TVertScrollBox
+        Align = Client
+        Size.Width = 836.000000000000000000
+        Size.Height = 471.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 836.000000000000000000
+        Viewport.Height = 471.000000000000000000
+        object LayoutFooter: TLayout
+          Align = Bottom
+          Position.Y = 431.000000000000000000
+          Size.Width = 836.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+        object LayoutBody: TLayout
+          Align = Client
+          Size.Width = 836.000000000000000000
+          Size.Height = 431.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+        end
       end
     end
   end

@@ -14,22 +14,22 @@ uses
   FMX.Forms,
   FMX.Dialogs,
   FMX.StdCtrls,
-  FMX.Layouts, mamutti.view.components.button, FMX.Objects;
+  FMX.Layouts, mamutti.view.components.button, FMX.Objects, FMX.Effects;
 
 type
   TComponentSidebar = class(TFrame)
     lytContainer: TLayout;
-    Layout1: TLayout;
-    Layout2: TLayout;
-    Layout3: TLayout;
-    Line1: TLine;
-    Line2: TLine;
-    lytProfile: TLayout;
-    lytMenu: TLayout;
-    Rectangle1: TRectangle;
+    RectangleSideBar: TRectangle;
+    ShadowEffect1: TShadowEffect;
+    LayoutMenu: TLayout;
+    LayoutHeader: TLayout;
+    LayoutExpandMenu: TLayout;
+    LayoutSideBar: TLayout;
   private
     procedure ConstruirPerfil;
     procedure ConstruirMenu;
+    procedure BuildExpandMenu;
+    procedure ResizeSideBar;
   public
     class function New(AOwner: TComponent): TComponentSidebar;
     function Component: TFMXObject;
@@ -39,15 +39,24 @@ implementation
 
 uses
   Router4D,
-  System.Generics.Collections;
+  System.Generics.Collections, mamutti.view.components.expandmenubutton;
 {$R *.fmx}
 
 { TComponentSidebar }
 
+procedure TComponentSidebar.BuildExpandMenu;
+begin
+  LayoutExpandMenu.AddObject(TComponentExpandMenuButton.New(Self)
+  .Click(procedure (Sender: TObject)
+    begin
+      TRouter4D.Link.&To('Empresas');
+    end)
+  .Component);
+end;
+
 function TComponentSidebar.Component: TFMXObject;
 begin
-  ConstruirMenu;
-  ConstruirPerfil;
+  BuildExpandMenu;
   Result := lytContainer;
 end;
 
@@ -145,32 +154,39 @@ begin
 //      end)
 //    .Component);
 
-  lytMenu.AddObject(
-    TComponentButton.New(Self)
-    .Nome('cadastros')
-    .CompositeButton
-    .SubMenu(lListaBotoes)
-    .Descricao('Cadastros')
-    .Image('cadastros')
-    .ColorDefault($FFFFFFFF)
-    .Alinhamento(TAlignLayout.Top)
-    .Component);
+//  lytMenu.AddObject(
+//    TComponentButton.New(Self)
+//    .Nome('cadastros')
+//    .CompositeButton
+//    .SubMenu(lListaBotoes)
+//    .Descricao('Cadastros')
+//    .Image('cadastros')
+//    .ColorDefault($FFFFFFFF)
+//    .Alinhamento(TAlignLayout.Top)
+//    .Component);
 end;
 
 procedure TComponentSidebar.ConstruirPerfil;
 begin
-  lytProfile.AddObject(
-    TComponentButton.New(Self)
-      .Nome('perfil')
-      .Perfil('perfil')
-      .Descricao('Celso Mutti')
-      .ColorDefault($FFFFFFFF)
-      .Component);
+//  lytProfile.AddObject(
+//    TComponentButton.New(Self)
+//      .Nome('perfil')
+//      .Perfil('perfil')
+//      .Descricao('Celso Mutti')
+//      .ColorDefault($FFFFFFFF)
+//      .Component);
 end;
 
 class function TComponentSidebar.New(AOwner: TComponent): TComponentSidebar;
 begin
   Result := Self.Create(AOwner);
+end;
+
+procedure TComponentSidebar.ResizeSideBar;
+begin
+  if Self.Width > 50 then
+ Selv
+
 end;
 
 end.

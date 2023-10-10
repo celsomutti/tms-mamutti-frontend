@@ -8,7 +8,6 @@ uses
   mamutti.view.index in 'src\view\mamutti.view.index.pas' {PageIndex},
   mamutti.view.pages.layout in 'src\view\pages\layout\mamutti.view.pages.layout.pas' {PageLayout},
   mamutti.view.components.sidebar in 'src\view\components\sidebar\mamutti.view.components.sidebar.pas' {ComponentSidebar: TFrame},
-  mamutti.view.components.button in 'src\view\components\buttonmenu\mamutti.view.components.button.pas' {ComponentButton: TFrame},
   mamutti.services.charts in 'src\services\mamutti.services.charts.pas',
   mamutti.services.chats.interfaces in 'src\services\mamutti.services.chats.interfaces.pas',
   mamutti.services.enums in 'src\services\mamutti.services.enums.pas',
@@ -20,7 +19,8 @@ uses
   mamutti.view.components.editImage in 'src\view\components\editImagem\mamutti.view.components.editImage.pas' {ComponentEditImage: TFrame},
   mamutti.view.pages.home in 'src\view\pages\home\mamutti.view.pages.home.pas' {PageHome},
   mamutti.view.router in 'src\view\router\mamutti.view.router.pas',
-  mamutti.view.components.buttonmenu in 'src\view\components\buttonmenu\mamutti.view.components.buttonmenu.pas' {ComponentButtonMenu: TFrame};
+  mamutti.view.components.button in 'src\view\components\buttonmenu\mamutti.view.components.button.pas' {ComponentButton: TFrame},
+  mamutti.view.components.expandmenubutton in 'src\view\components\expandmenubutton\mamutti.view.components.expandmenubutton.pas' {ComponentExpandMenuButton: TFrame};
 
 {$R *.res}
 

@@ -1,6 +1,6 @@
 {
 	"name": "mamutti",
-	"description": "ERP gestão transportadora",
+	"description": "TMS MaMutti",
 	"version": "1.0.0",
 	"homepage": "www.azplanlog.com",
 	"mainsrc": "./src",

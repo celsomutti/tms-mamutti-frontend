@@ -4,6 +4,7 @@ object PageIndex: TPageIndex
   Caption = 'Form1'
   ClientHeight = 614
   ClientWidth = 874
+  Fill.Kind = Solid
   WindowState = wsMaximized
   FormFactor.Width = 320
   FormFactor.Height = 480

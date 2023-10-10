@@ -263,11 +263,6 @@
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
-        <DCCReference Include="src\view\components\buttonmenu\mamutti.view.components.button.pas">
-            <Form>ComponentButton</Form>
-            <FormType>fmx</FormType>
-            <DesignClass>TFrame</DesignClass>
-        </DCCReference>
         <DCCReference Include="src\services\mamutti.services.charts.pas"/>
         <DCCReference Include="src\services\mamutti.services.chats.interfaces.pas"/>
         <DCCReference Include="src\services\mamutti.services.enums.pas"/>
@@ -298,8 +293,13 @@
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="src\view\router\mamutti.view.router.pas"/>
-        <DCCReference Include="src\view\components\buttonmenu\mamutti.view.components.buttonmenu.pas">
-            <Form>ComponentButtonMenu</Form>
+        <DCCReference Include="src\view\components\buttonmenu\mamutti.view.components.button.pas">
+            <Form>ComponentButton</Form>
+            <FormType>fmx</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="src\view\components\expandmenubutton\mamutti.view.components.expandmenubutton.pas">
+            <Form>ComponentExpandMenuButton</Form>
             <FormType>fmx</FormType>
             <DesignClass>TFrame</DesignClass>
         </DCCReference>
@@ -314,6 +314,10 @@
         <RcItem Include="src\asserts\cadastros.png">
             <ResourceType>RCDATA</ResourceType>
             <ResourceId>cadastros</ResourceId>
+        </RcItem>
+        <RcItem Include="src\asserts\menu-hamburguer.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>menu</ResourceId>
         </RcItem>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -377,6 +381,12 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="src\asserts\perfil.jpg" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\asserts\menu-hamburguer.png" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
@@ -1183,9 +1193,9 @@
                 </DeployClass>
                 <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
-                <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>

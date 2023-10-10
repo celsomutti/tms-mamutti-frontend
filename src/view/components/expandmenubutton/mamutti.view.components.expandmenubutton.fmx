@@ -1,0 +1,33 @@
+object ComponentExpandMenuButton: TComponentExpandMenuButton
+  Size.Width = 40.000000000000000000
+  Size.Height = 40.000000000000000000
+  Size.PlatformDefault = False
+  object LayoutContainer: TLayout
+    Align = Client
+    Size.Width = 40.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object LayoutButton: TLayout
+      Align = Client
+      Cursor = crHandPoint
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 30.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object ImageExpand: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Align = Client
+        Size.Width = 30.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+end
