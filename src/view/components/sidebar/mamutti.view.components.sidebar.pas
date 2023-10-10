@@ -14,22 +14,23 @@ uses
   FMX.Forms,
   FMX.Dialogs,
   FMX.StdCtrls,
-  FMX.Layouts, mamutti.view.components.button, FMX.Objects, FMX.Effects;
+  FMX.Layouts, mamutti.view.components.button, FMX.Objects, FMX.Effects,
+  FMX.Controls.Presentation;
 
 type
   TComponentSidebar = class(TFrame)
-    lytContainer: TLayout;
-    RectangleSideBar: TRectangle;
+    LayoutContainer: TLayout;
+    RectangleMenu: TRectangle;
+    LayoutHeaderSideBar: TLayout;
+    Line1: TLine;
+    LayoutLogoMaMutti: TLayout;
+    CircleLogoMaMutti: TCircle;
+    LayoutLabelMaMutti: TLayout;
+    LabelMaMutti: TLabel;
     ShadowEffect1: TShadowEffect;
-    LayoutMenu: TLayout;
-    LayoutHeader: TLayout;
-    LayoutExpandMenu: TLayout;
-    LayoutSideBar: TLayout;
   private
     procedure ConstruirPerfil;
     procedure ConstruirMenu;
-    procedure BuildExpandMenu;
-    procedure ResizeSideBar;
   public
     class function New(AOwner: TComponent): TComponentSidebar;
     function Component: TFMXObject;
@@ -39,25 +40,15 @@ implementation
 
 uses
   Router4D,
-  System.Generics.Collections, mamutti.view.components.expandmenubutton;
+  System.Generics.Collections;
 {$R *.fmx}
 
 { TComponentSidebar }
 
-procedure TComponentSidebar.BuildExpandMenu;
-begin
-  LayoutExpandMenu.AddObject(TComponentExpandMenuButton.New(Self)
-  .Click(procedure (Sender: TObject)
-    begin
-      TRouter4D.Link.&To('Empresas');
-    end)
-  .Component);
-end;
 
 function TComponentSidebar.Component: TFMXObject;
 begin
-  BuildExpandMenu;
-  Result := lytContainer;
+  Result := LayoutContainer;
 end;
 
 procedure TComponentSidebar.ConstruirMenu;
@@ -180,13 +171,6 @@ end;
 class function TComponentSidebar.New(AOwner: TComponent): TComponentSidebar;
 begin
   Result := Self.Create(AOwner);
-end;
-
-procedure TComponentSidebar.ResizeSideBar;
-begin
-  if Self.Width > 50 then
- Selv
-
 end;
 
 end.

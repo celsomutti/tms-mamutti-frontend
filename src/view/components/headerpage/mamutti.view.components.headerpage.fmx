@@ -1,0 +1,37 @@
+object ComponentHeaderPage: TComponentHeaderPage
+  Size.Width = 625.000000000000000000
+  Size.Height = 50.000000000000000000
+  Size.PlatformDefault = False
+  object LayoutContainer: TLayout
+    Align = Client
+    Size.Width = 625.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object RectangleHeaderPage: TRectangle
+      Align = Client
+      Fill.Color = xFFF9F9F9
+      Margins.Left = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Size.Width = 605.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object ShadowEffect1: TShadowEffect
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 0.600000023841857900
+        ShadowColor = claBlack
+      end
+      object LayoutUser: TLayout
+        Align = Right
+        Position.X = 455.000000000000000000
+        Size.Width = 150.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+    end
+  end
+end

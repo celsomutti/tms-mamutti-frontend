@@ -20,7 +20,8 @@ uses
   mamutti.view.pages.home in 'src\view\pages\home\mamutti.view.pages.home.pas' {PageHome},
   mamutti.view.router in 'src\view\router\mamutti.view.router.pas',
   mamutti.view.components.button in 'src\view\components\buttonmenu\mamutti.view.components.button.pas' {ComponentButton: TFrame},
-  mamutti.view.components.expandmenubutton in 'src\view\components\expandmenubutton\mamutti.view.components.expandmenubutton.pas' {ComponentExpandMenuButton: TFrame};
+  mamutti.view.components.expandmenubutton in 'src\view\components\expandmenubutton\mamutti.view.components.expandmenubutton.pas' {ComponentExpandMenuButton: TFrame},
+  mamutti.view.components.headerpage in 'src\view\components\headerpage\mamutti.view.components.headerpage.pas' {ComponentHeaderPage: TFrame};
 
 {$R *.res}
 

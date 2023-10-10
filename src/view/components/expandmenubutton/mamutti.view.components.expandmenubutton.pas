@@ -46,7 +46,7 @@ end;
 procedure TComponentExpandMenuButton.BuildButton;
 begin
   TUtils.ResourceImage('menu', ImageExpand);
-  TUtils.ImageColor(ImageExpand, $FFFFFFFF);
+  TUtils.ImageColor(ImageExpand, $FF556574);
 end;
 
 class function TComponentExpandMenuButton.New(AOwner: TComponent)

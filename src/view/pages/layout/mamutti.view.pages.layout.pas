@@ -18,7 +18,8 @@ uses
   FMX.Controls.Presentation,
   FMX.MultiView,
   Router4D.Interfaces, FMX.StdCtrls, mamutti.view.components.sidebar,
-  FMX.Effects;
+  FMX.Effects, mamutti.view.components.headerpage,
+  mamutti.view.components.expandmenubutton;
 
 type
   TPageLayout = class(TForm, iRouter4DComponent)
@@ -29,10 +30,11 @@ type
     VertScrollBox: TVertScrollBox;
     LayoutFooter: TLayout;
     LayoutBody: TLayout;
-    RectangleHeader: TRectangle;
-    ShadowEffect1: TShadowEffect;
+    LayoutExpandMenu: TLayout;
   private
+    procedure RenderExpandMenu;
     procedure RenderSidebar;
+    procedure RenderHeaderPage;
   public
     function Render: TFMXObject;
     procedure UnRender;
@@ -51,8 +53,28 @@ uses
 function TPageLayout.Render: TFMXObject;
 begin
   RenderSidebar;
+  RenderHeaderPage;
+  RenderExpandMenu;
   TRouter4D.Render<TPageHome>.SetELement(LayoutBody);
   Result := LayoutContainer;
+end;
+
+procedure TPageLayout.RenderExpandMenu;
+begin
+  LayoutExpandMenu.AddObject(TComponentExpandMenuButton.New(Self)
+  .Click(procedure (Sender: TObject)
+      begin
+        if LayoutSideBar.Width > 100 then
+          LayoutSideBar.Width := 50
+        else
+          LayoutSideBar.Width := 160;
+      end)
+  .Component);
+end;
+
+procedure TPageLayout.RenderHeaderPage;
+begin
+  LayoutHeader.AddObject(TComponentHeaderPage.New(Self).Component);
 end;
 
 procedure TPageLayout.RenderSidebar;

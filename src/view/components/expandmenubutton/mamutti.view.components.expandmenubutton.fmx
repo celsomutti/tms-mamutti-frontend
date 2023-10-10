@@ -11,6 +11,7 @@ object ComponentExpandMenuButton: TComponentExpandMenuButton
     object LayoutButton: TLayout
       Align = Client
       Cursor = crHandPoint
+      HitTest = True
       Margins.Left = 5.000000000000000000
       Margins.Top = 5.000000000000000000
       Margins.Right = 5.000000000000000000
