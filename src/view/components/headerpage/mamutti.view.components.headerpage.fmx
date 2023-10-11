@@ -1,37 +1,63 @@
 object ComponentHeaderPage: TComponentHeaderPage
-  Size.Width = 625.000000000000000000
+  Size.Width = 844.000000000000000000
   Size.Height = 50.000000000000000000
   Size.PlatformDefault = False
   object LayoutContainer: TLayout
     Align = Client
-    Size.Width = 625.000000000000000000
+    Size.Width = 844.000000000000000000
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
-    object RectangleHeaderPage: TRectangle
-      Align = Client
-      Fill.Color = xFFF9F9F9
-      Margins.Left = 10.000000000000000000
-      Margins.Right = 10.000000000000000000
-      Size.Width = 605.000000000000000000
+    object LayoutCompany: TLayout
+      Align = Left
+      Size.Width = 200.000000000000000000
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
-      Stroke.Kind = None
-      object ShadowEffect1: TShadowEffect
-        Distance = 3.000000000000000000
-        Direction = 45.000000000000000000
-        Softness = 0.300000011920929000
-        Opacity = 0.600000023841857900
-        ShadowColor = claBlack
-      end
-      object LayoutUser: TLayout
-        Align = Right
-        Position.X = 455.000000000000000000
-        Size.Width = 150.000000000000000000
+      TabOrder = 0
+      object LayoutLogoCompany: TLayout
+        Align = Left
+        Size.Width = 50.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
+        object ImageLogoCompany: TImage
+          MultiResBitmap = <
+            item
+            end>
+          Align = Client
+          Size.Width = 50.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+        end
       end
+      object LayoutComanyName: TLayout
+        Align = Client
+        Margins.Left = 5.000000000000000000
+        Size.Width = 145.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object LabelCompanyName: TLabel
+          Align = Client
+          StyledSettings = [Size, Style]
+          Size.Width = 145.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Verdana'
+          TextSettings.FontColor = xFF556574
+          Text = 'LabelCompanyName'
+          TabOrder = 0
+        end
+      end
+    end
+    object LayoutUserButon: TLayout
+      Align = Right
+      Padding.Top = 5.000000000000000000
+      Position.X = 664.000000000000000000
+      Size.Width = 180.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
     end
   end
 end

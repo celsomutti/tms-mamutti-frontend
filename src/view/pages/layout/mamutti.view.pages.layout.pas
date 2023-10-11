@@ -26,10 +26,13 @@ type
     LayoutContainer: TLayout;
     LayoutSideBar: TLayout;
     LayoutMain: TLayout;
-    LayoutHeader: TLayout;
     VertScrollBox: TVertScrollBox;
     LayoutFooter: TLayout;
     LayoutBody: TLayout;
+    LayoutHeader: TLayout;
+    RectangleHeader: TRectangle;
+    ShadowEffect1: TShadowEffect;
+    LayoutHeaderPage: TLayout;
     LayoutExpandMenu: TLayout;
   private
     procedure RenderExpandMenu;
@@ -65,7 +68,7 @@ begin
   .Click(procedure (Sender: TObject)
       begin
         if LayoutSideBar.Width > 100 then
-          LayoutSideBar.Width := 50
+          LayoutSideBar.Width := 60
         else
           LayoutSideBar.Width := 160;
       end)
@@ -74,7 +77,7 @@ end;
 
 procedure TPageLayout.RenderHeaderPage;
 begin
-  LayoutHeader.AddObject(TComponentHeaderPage.New(Self).Component);
+  LayoutHeaderPage.AddObject(TComponentHeaderPage.New(Self).Component);
 end;
 
 procedure TPageLayout.RenderSidebar;

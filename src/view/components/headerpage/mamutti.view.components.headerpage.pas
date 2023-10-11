@@ -6,16 +6,21 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes,
   System.Variants,
   FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
-  FMX.Layouts, FMX.Effects, FMX.Objects;
+  FMX.Layouts, FMX.Effects, FMX.Objects, FMX.Controls.Presentation,
+  mamutti.view.components.button;
 
 type
   TComponentHeaderPage = class(TFrame)
     LayoutContainer: TLayout;
-    RectangleHeaderPage: TRectangle;
-    ShadowEffect1: TShadowEffect;
-    LayoutUser: TLayout;
+    LayoutCompany: TLayout;
+    LayoutLogoCompany: TLayout;
+    ImageLogoCompany: TImage;
+    LayoutComanyName: TLayout;
+    LabelCompanyName: TLabel;
+    LayoutUserButon: TLayout;
   private
-    { Private declarations }
+    procedure BuildImageLogo;
+    procedure BuilderUserButton;
   public
     class function New(AOwner: TComponent): TComponentHeaderPage;
     function Component: TFMXObject;
@@ -27,12 +32,33 @@ implementation
 
 uses
   Router4D,
-  System.Generics.Collections;
+  System.Generics.Collections, mamutti.view.components.expandmenubutton,
+  mamutti.services.utils;
 
 { TComponentHeaderPage }
 
+procedure TComponentHeaderPage.BuilderUserButton;
+begin
+  LayoutUserButon.AddObject(
+    TComponentButton.New(Self)
+      .Nome('perfil')
+      .CompositeButton
+      .Perfil('userface')
+      .Descricao('Admin Admin Admin')
+      .ColorDefault($FF556574)
+      .Component);
+
+end;
+
+procedure TComponentHeaderPage.BuildImageLogo;
+begin
+  TUtils.ResourceImage('logocompany', ImageLogoCompany);
+end;
+
 function TComponentHeaderPage.Component: TFMXObject;
 begin
+  BuildImageLogo;
+  BuilderUserButton;
   Result := LayoutContainer;
 end;
 

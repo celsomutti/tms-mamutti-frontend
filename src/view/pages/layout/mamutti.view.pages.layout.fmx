@@ -29,19 +29,12 @@ object PageLayout: TPageLayout
       Size.Height = 521.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
-      object LayoutHeader: TLayout
-        Align = Top
-        Size.Width = 826.000000000000000000
-        Size.Height = 50.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 0
-      end
       object VertScrollBox: TVertScrollBox
         Align = Client
         Size.Width = 826.000000000000000000
         Size.Height = 471.000000000000000000
         Size.PlatformDefault = False
-        TabOrder = 1
+        TabOrder = 0
         Viewport.Width = 826.000000000000000000
         Viewport.Height = 471.000000000000000000
         object LayoutFooter: TLayout
@@ -60,17 +53,55 @@ object PageLayout: TPageLayout
           TabOrder = 1
         end
       end
-    end
-    object LayoutExpandMenu: TLayout
-      Padding.Left = 10.000000000000000000
-      Padding.Top = 10.000000000000000000
-      Padding.Right = 10.000000000000000000
-      Padding.Bottom = 10.000000000000000000
-      Position.X = 160.000000000000000000
-      Size.Width = 50.000000000000000000
-      Size.Height = 50.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 2
+      object LayoutHeader: TLayout
+        Align = Top
+        Size.Width = 826.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object RectangleHeader: TRectangle
+          Align = Client
+          Fill.Color = xFFFBF5EF
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 806.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 5.000000000000000000
+          YRadius = 5.000000000000000000
+          object ShadowEffect1: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claBlack
+          end
+          object LayoutHeaderPage: TLayout
+            Align = Client
+            Margins.Left = 2.000000000000000000
+            Margins.Top = 2.000000000000000000
+            Margins.Right = 2.000000000000000000
+            Margins.Bottom = 2.000000000000000000
+            Size.Width = 752.000000000000000000
+            Size.Height = 46.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+          end
+          object LayoutExpandMenu: TLayout
+            Align = Left
+            HitTest = True
+            Padding.Left = 10.000000000000000000
+            Padding.Top = 10.000000000000000000
+            Padding.Right = 10.000000000000000000
+            Padding.Bottom = 10.000000000000000000
+            Size.Width = 50.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+          end
+        end
+      end
     end
   end
 end

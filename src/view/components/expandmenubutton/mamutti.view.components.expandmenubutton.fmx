@@ -1,4 +1,5 @@
 object ComponentExpandMenuButton: TComponentExpandMenuButton
+  HitTest = False
   Size.Width = 40.000000000000000000
   Size.Height = 40.000000000000000000
   Size.PlatformDefault = False
@@ -20,11 +21,13 @@ object ComponentExpandMenuButton: TComponentExpandMenuButton
       Size.Height = 30.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
+      OnClick = LayoutButtonClick
       object ImageExpand: TImage
         MultiResBitmap = <
           item
           end>
         Align = Client
+        HitTest = False
         Size.Width = 30.000000000000000000
         Size.Height = 30.000000000000000000
         Size.PlatformDefault = False

@@ -13,6 +13,7 @@ type
     LayoutContainer: TLayout;
     LayoutButton: TLayout;
     ImageExpand: TImage;
+    procedure LayoutButtonClick(Sender: TObject);
   private
      FProc: TProc<TObject>;
     procedure BuildButton;
@@ -41,6 +42,13 @@ function TComponentExpandMenuButton.Component: TFMXObject;
 begin
   BuildButton;
   Result := LayoutContainer;
+end;
+
+procedure TComponentExpandMenuButton.LayoutButtonClick(Sender: TObject);
+begin
+  if Assigned(FProc) then
+    FProc(Sender);
+  exit;
 end;
 
 procedure TComponentExpandMenuButton.BuildButton;

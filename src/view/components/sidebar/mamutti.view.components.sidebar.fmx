@@ -131,7 +131,7 @@ object ComponentSidebar: TComponentSidebar
               Size.PlatformDefault = False
               TextSettings.Font.Family = 'Verdana'
               TextSettings.Font.StyleExt = {00070000000000000004000000}
-              TextSettings.FontColor = xFFC2C7CF
+              TextSettings.FontColor = xFFE6E6E6
               Text = 'TMS MaMutti'
               TabOrder = 0
             end
