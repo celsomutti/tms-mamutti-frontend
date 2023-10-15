@@ -40,7 +40,7 @@ end;
 
 procedure TPageHome.UnRender;
 begin
-
+  Self.Free;
 end;
 
 end.

@@ -27,7 +27,6 @@ type
     CircleLogoMaMutti: TCircle;
     LayoutLabelMaMutti: TLayout;
     LabelMaMutti: TLabel;
-    ShadowEffect1: TShadowEffect;
   private
     procedure ConstruirPerfil;
     procedure ConstruirMenu;

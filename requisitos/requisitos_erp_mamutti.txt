@@ -44,7 +44,7 @@ Sistema
   Trocar Usuário
 
 ------------------------------------------------
-
+#E7E7E6
 Layout
 
 https://demos.creative-tim.com/paper-dashboard-pro-react/?_ga=2.268153166.1771291006.1689254107-1969382654.1689085198#/admin/dashboard

@@ -30,10 +30,9 @@ type
     LayoutFooter: TLayout;
     LayoutBody: TLayout;
     LayoutHeader: TLayout;
-    RectangleHeader: TRectangle;
-    ShadowEffect1: TShadowEffect;
-    LayoutHeaderPage: TLayout;
+    Line1: TLine;
     LayoutExpandMenu: TLayout;
+    LayoutHeaderPage: TLayout;
   private
     procedure RenderExpandMenu;
     procedure RenderSidebar;
@@ -87,6 +86,7 @@ end;
 
 procedure TPageLayout.UnRender;
 begin
+
 end;
 
 end.

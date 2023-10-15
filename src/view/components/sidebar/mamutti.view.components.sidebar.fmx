@@ -11,12 +11,10 @@ object ComponentSidebar: TComponentSidebar
     object RectangleMenu: TRectangle
       Align = Client
       Fill.Color = xFF556574
-      Margins.Bottom = 10.000000000000000000
       Size.Width = 200.000000000000000000
-      Size.Height = 737.000000000000000000
+      Size.Height = 747.000000000000000000
       Size.PlatformDefault = False
       Stroke.Kind = None
-      XRadius = 5.000000000000000000
       YRadius = 5.000000000000000000
       object LayoutHeaderSideBar: TLayout
         Align = Top
@@ -137,13 +135,6 @@ object ComponentSidebar: TComponentSidebar
             end
           end
         end
-      end
-      object ShadowEffect1: TShadowEffect
-        Distance = 3.000000000000000000
-        Direction = 45.000000000000000000
-        Softness = 0.300000011920929000
-        Opacity = 0.600000023841857900
-        ShadowColor = claBlack
       end
     end
   end
