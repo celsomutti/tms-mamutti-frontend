@@ -31,10 +31,10 @@ type
     LayoutBody: TLayout;
     LayoutHeader: TLayout;
     Line1: TLine;
-    LayoutExpandMenu: TLayout;
     LayoutHeaderPage: TLayout;
+    multiView: TMultiView;
+    MasterButton: TSpeedButton;
   private
-    procedure RenderExpandMenu;
     procedure RenderSidebar;
     procedure RenderHeaderPage;
   public
@@ -56,22 +56,8 @@ function TPageLayout.Render: TFMXObject;
 begin
   RenderSidebar;
   RenderHeaderPage;
-  RenderExpandMenu;
   TRouter4D.Render<TPageHome>.SetELement(LayoutBody);
   Result := LayoutContainer;
-end;
-
-procedure TPageLayout.RenderExpandMenu;
-begin
-  LayoutExpandMenu.AddObject(TComponentExpandMenuButton.New(Self)
-  .Click(procedure (Sender: TObject)
-      begin
-        if LayoutSideBar.Width > 100 then
-          LayoutSideBar.Width := 60
-        else
-          LayoutSideBar.Width := 160;
-      end)
-  .Component);
 end;
 
 procedure TPageLayout.RenderHeaderPage;

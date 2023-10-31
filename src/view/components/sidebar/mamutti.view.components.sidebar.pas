@@ -27,9 +27,10 @@ type
     CircleLogoMaMutti: TCircle;
     LayoutLabelMaMutti: TLayout;
     LabelMaMutti: TLabel;
+    layoutMenu: TLayout;
   private
     procedure ConstruirPerfil;
-    procedure ConstruirMenu;
+    procedure BuildMenu;
   public
     class function New(AOwner: TComponent): TComponentSidebar;
     function Component: TFMXObject;
@@ -47,79 +48,80 @@ uses
 
 function TComponentSidebar.Component: TFMXObject;
 begin
+  BuildMenu;
   Result := LayoutContainer;
 end;
 
-procedure TComponentSidebar.ConstruirMenu;
+procedure TComponentSidebar.BuildMenu;
 begin
   var lListaBotoes := TObjectList<TFMXObject>.Create;
-  lListaBotoes.Add(
-    TComponentButton.New(Self)
-      .Nome('empresas')
-      .SingleButton
-      .Descricao('Empresas')
-      .ColorDefault($FFFFFFFF)
+//    lListaBotoes.Add(
+//    TComponentButton.New(Self)
+//      .Nome('empresas')
+//      .SingleButton
+//      .Descricao('Empresas')
+//      .ColorDefault($FFFFFFFF)
 //      .Click(procedure (Sender: TObject)
 //      begin
 //        TRouter4D.Link.&To('Empresas');
 //      end)
-      .Component);
+//      .Component);
 
-  lListaBotoes.Add(
-    TComponentButton.New(Self)
-      .Nome('clientes')
-      .SingleButton
-      .Descricao('Clientes')
-      .ColorDefault($FFFFFFFF)
-      .Component);
-
-  lListaBotoes.Add(
-    TComponentButton.New(Self)
-      .Nome('fornecedor')
-      .SingleButton
-      .Descricao('Fornecedores')
-      .ColorDefault($FFFFFFFF)
-      .Component);
-
-  lListaBotoes.Add(
-    TComponentButton.New(Self)
-      .Nome('agente')
-      .SingleButton
-      .Descricao('Bases')
-      .ColorDefault($FFFFFFFF)
-      .Component);
-
-    lListaBotoes.Add(
-    TComponentButton.New(Self)
-      .Nome('contratados')
-      .SingleButton
-      .Descricao('Contratados')
-      .ColorDefault($FFFFFFFF)
-      .Component);
-
-    lListaBotoes.Add(
-    TComponentButton.New(Self)
-      .Nome('funcionarios')
-      .SingleButton
-      .Descricao('Funcionários')
-      .ColorDefault($FFFFFFFF)
-      .Component);
-
-    lListaBotoes.Add(
-    TComponentButton.New(Self)
-      .Nome('motorista')
-      .SingleButton
-      .Descricao('Motoristas')
-      .ColorDefault($FFFFFFFF)
-      .Component);
-
-    lListaBotoes.Add(
-    TComponentButton.New(Self)
-      .Nome('veiculos')
-      .SingleButton
-      .Descricao('Veículoas')
-      .ColorDefault($FFFFFFFF)
-      .Component);
+//  lListaBotoes.Add(
+//    TComponentButton.New(Self)
+//      .Nome('clientes')
+//      .SingleButton
+//      .Descricao('Clientes')
+//      .ColorDefault($FFFFFFFF)
+//      .Component);
+//
+//  lListaBotoes.Add(
+//    TComponentButton.New(Self)
+//      .Nome('fornecedor')
+//      .SingleButton
+//      .Descricao('Fornecedores')
+//      .ColorDefault($FFFFFFFF)
+//      .Component);
+//
+//  lListaBotoes.Add(
+//    TComponentButton.New(Self)
+//      .Nome('agente')
+//      .SingleButton
+//      .Descricao('Bases')
+//      .ColorDefault($FFFFFFFF)
+//      .Component);
+//
+//    lListaBotoes.Add(
+//    TComponentButton.New(Self)
+//      .Nome('contratados')
+//      .SingleButton
+//      .Descricao('Contratados')
+//      .ColorDefault($FFFFFFFF)
+//      .Component);
+//
+//    lListaBotoes.Add(
+//    TComponentButton.New(Self)
+//      .Nome('funcionarios')
+//      .SingleButton
+//      .Descricao('Funcionários')
+//      .ColorDefault($FFFFFFFF)
+//      .Component);
+//
+//    lListaBotoes.Add(
+//    TComponentButton.New(Self)
+//      .Nome('motorista')
+//      .SingleButton
+//      .Descricao('Motoristas')
+//      .ColorDefault($FFFFFFFF)
+//      .Component);
+//
+//    lListaBotoes.Add(
+//    TComponentButton.New(Self)
+//      .Nome('veiculos')
+//      .SingleButton
+//      .Descricao('Veículoas')
+//      .ColorDefault($FFFFFFFF)
+//      .Component);
 
 //  lListaBotoes.Add(
 //    TComponentButton.New(Self)
@@ -154,6 +156,18 @@ begin
 //    .ColorDefault($FFFFFFFF)
 //    .Alinhamento(TAlignLayout.Top)
 //    .Component);
+
+  layoutMenu.AddObject(
+    TComponentButton.New(Self)
+    .Nome('cadastros')
+    .CompositeButton
+    .SubMenu(lListaBotoes)
+    .Descricao('Cadastros')
+    .Image('cadastro')
+    .ColorDefault($FFFFFFFF)
+    .Alinhamento(TAlignLayout.Top)
+    .Component);
+
 end;
 
 procedure TComponentSidebar.ConstruirPerfil;

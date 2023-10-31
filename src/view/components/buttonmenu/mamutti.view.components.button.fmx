@@ -11,7 +11,7 @@ object ComponentButton: TComponentButton
     object Layout1: TLayout
       Align = Top
       Cursor = crHandPoint
-      Padding.Left = 10.000000000000000000
+      Padding.Left = 5.000000000000000000
       Padding.Right = 10.000000000000000000
       Size.Width = 341.000000000000000000
       Size.Height = 40.000000000000000000
@@ -19,7 +19,7 @@ object ComponentButton: TComponentButton
       TabOrder = 0
       object Layout2: TLayout
         Align = Client
-        Size.Width = 321.000000000000000000
+        Size.Width = 326.000000000000000000
         Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -81,14 +81,14 @@ object ComponentButton: TComponentButton
           Padding.Top = 5.000000000000000000
           Padding.Right = 5.000000000000000000
           Padding.Bottom = 5.000000000000000000
-          Size.Width = 281.000000000000000000
+          Size.Width = 286.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
           object lblDescricao: TLabel
             Align = Client
             StyledSettings = [Family, Style]
-            Size.Width = 271.000000000000000000
+            Size.Width = 276.000000000000000000
             Size.Height = 30.000000000000000000
             Size.PlatformDefault = False
             TextSettings.Font.Size = 13.000000000000000000

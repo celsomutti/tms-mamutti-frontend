@@ -8,7 +8,6 @@ Cadastros
   Motoristas
   Veículos
 Expressas
-  Importação de Planilhas
   Remessas
   Coletas
   Acareações
@@ -25,16 +24,13 @@ Transportes
   Manutenção de Veículos
   Abastecimentos
   Controle de Insumos
-  Controle de Abastecimentos
 Financeiro
   Lançamento Diversos
   Extrato de Expressas
-  Extrato de Periódicos
   Extrato de Serviços
   Contas a Pagar
   Contas a Receber
   Caixa
-  Documentos
   Planilha de Crédito
   Tabela de Remuneração
   Tabela de Fretes

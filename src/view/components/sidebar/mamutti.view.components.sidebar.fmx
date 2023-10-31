@@ -10,7 +10,20 @@ object ComponentSidebar: TComponentSidebar
     TabOrder = 0
     object RectangleMenu: TRectangle
       Align = Client
-      Fill.Color = xFF556574
+      Fill.Kind = Gradient
+      Fill.Gradient.Points = <
+        item
+          Color = claBlack
+          Offset = 0.000000000000000000
+        end
+        item
+          Color = xFF6A6A6A
+          Offset = 1.000000000000000000
+        end>
+      Fill.Gradient.StartPosition.X = 0.500000000000000000
+      Fill.Gradient.StartPosition.Y = 1.000000000000000000
+      Fill.Gradient.StopPosition.X = 0.499999970197677600
+      Fill.Gradient.StopPosition.Y = 0.000000000000000000
       Size.Width = 200.000000000000000000
       Size.Height = 747.000000000000000000
       Size.PlatformDefault = False
@@ -135,6 +148,13 @@ object ComponentSidebar: TComponentSidebar
             end
           end
         end
+      end
+      object layoutMenu: TLayout
+        Align = Client
+        Size.Width = 200.000000000000000000
+        Size.Height = 697.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
       end
     end
   end

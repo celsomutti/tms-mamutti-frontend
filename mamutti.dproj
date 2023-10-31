@@ -318,7 +318,7 @@
         </RcItem>
         <RcItem Include="src\asserts\cadastros.png">
             <ResourceType>RCDATA</ResourceType>
-            <ResourceId>cadastros</ResourceId>
+            <ResourceId>cadastro</ResourceId>
         </RcItem>
         <RcItem Include="src\asserts\menu-hamburguer.png">
             <ResourceType>RCDATA</ResourceType>
@@ -331,6 +331,34 @@
         <RcItem Include="src\asserts\logo_azplan_2.png">
             <ResourceType>RCDATA</ResourceType>
             <ResourceId>logocompany</ResourceId>
+        </RcItem>
+        <RcItem Include="src\asserts\bala.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>ponto</ResourceId>
+        </RcItem>
+        <RcItem Include="src\asserts\carrinho-de-pessoa.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>servicos</ResourceId>
+        </RcItem>
+        <RcItem Include="src\asserts\definicoes.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>sistema</ResourceId>
+        </RcItem>
+        <RcItem Include="src\asserts\dolar-da-fatura-do-arquivo.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>financeiro</ResourceId>
+        </RcItem>
+        <RcItem Include="src\asserts\envio-rapido.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>expressas</ResourceId>
+        </RcItem>
+        <RcItem Include="src\asserts\livro-aberto-capa.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>periodicos</ResourceId>
+        </RcItem>
+        <RcItem Include="src\asserts\parafuso-do-caminhao.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>transporte</ResourceId>
         </RcItem>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -377,23 +405,13 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
-                    <Platform Name="iOSSimulator">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
-                    <Platform Name="OSX32">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="src\asserts\setaBaixo.png" Configuration="Debug" Class="ProjectFile">
+                <DeployFile LocalName="src\asserts\livro-aberto-capa.png" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="src\asserts\cadastros.png" Configuration="Debug" Class="ProjectFile">
+                <DeployFile LocalName="src\asserts\setaBaixo.png" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
@@ -411,7 +429,59 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
+                <DeployFile LocalName="src\asserts\definicoes.png" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\asserts\bala.png" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="OSX32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\asserts\cadastros.png" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\asserts\carrinho-de-pessoa.png" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\asserts\dolar-da-fatura-do-arquivo.png" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
                 <DeployFile LocalName="src\asserts\menu-hamburguer.png" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\asserts\parafuso-do-caminhao.png" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\asserts\envio-rapido.png" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
@@ -1218,10 +1288,10 @@
                 </DeployClass>
                 <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
-                <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
-                <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>

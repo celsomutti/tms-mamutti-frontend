@@ -15,38 +15,31 @@ object PageLayout: TPageLayout
     Size.Height = 521.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
-    object LayoutSideBar: TLayout
-      Align = Left
-      Size.Width = 160.000000000000000000
+    object LayoutMain: TLayout
+      Align = Client
+      Size.Width = 986.000000000000000000
       Size.Height = 521.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
-    end
-    object LayoutMain: TLayout
-      Align = Client
-      Size.Width = 826.000000000000000000
-      Size.Height = 521.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 1
       object VertScrollBox: TVertScrollBox
         Align = Client
-        Size.Width = 826.000000000000000000
+        Size.Width = 986.000000000000000000
         Size.Height = 471.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
-        Viewport.Width = 826.000000000000000000
+        Viewport.Width = 986.000000000000000000
         Viewport.Height = 471.000000000000000000
         object LayoutFooter: TLayout
           Align = Bottom
           Position.Y = 431.000000000000000000
-          Size.Width = 826.000000000000000000
+          Size.Width = 986.000000000000000000
           Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
         end
         object LayoutBody: TLayout
           Align = Client
-          Size.Width = 826.000000000000000000
+          Size.Width = 986.000000000000000000
           Size.Height = 431.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -54,29 +47,50 @@ object PageLayout: TPageLayout
       end
       object LayoutHeader: TLayout
         Align = Top
-        Size.Width = 826.000000000000000000
+        Size.Width = 986.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
         object Line1: TLine
           Align = Bottom
           LineType = Bottom
-          Size.Width = 826.000000000000000000
+          Size.Width = 986.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFFDDDDDD
-          object LayoutExpandMenu: TLayout
-            Align = Left
-            TabOrder = 0
-          end
           object LayoutHeaderPage: TLayout
             Align = Client
-            Size.Width = 776.000000000000000000
+            Size.Width = 986.000000000000000000
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 1
+            TabOrder = 0
+            object MasterButton: TSpeedButton
+              Align = Left
+              Cursor = crHandPoint
+              Margins.Left = 50.000000000000000000
+              Position.X = 50.000000000000000000
+              Size.Width = 50.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'detailstoolbutton'
+            end
           end
         end
+      end
+    end
+    object multiView: TMultiView
+      MasterButton = MasterButton
+      ShadowOptions.Enabled = False
+      Size.Width = 250.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object LayoutSideBar: TLayout
+        Align = Client
+        Size.Width = 50.000000000000000000
+        Size.Height = 521.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
       end
     end
   end
